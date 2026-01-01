@@ -1,116 +1,139 @@
-# ENGLISH <img width="25px" src="./assets/logo.png" /> JANALA
+📘 Vocabulary Learning App
 
----
+A modern vocabulary learning web application that allows users to explore words by level, view detailed meanings, hear pronunciations, search vocabularies, and save favorite words — all powered by APIs and an interactive UI inspired by Figma designs.
 
-## ⚡ API Endpoints
+🚀 Features
+🔢 Level-Based Learning
 
-1. Get ⚡ All Levels
+Center-aligned heading as per Figma design
 
-```bash
-https://openapi.programming-hero.com/api/levels/all
-```
+Dynamically generated Lesson/Level buttons from API-01
 
-1. Get ⚡ Words by Levels <br/>
-   https:// openapi.programming-hero.com/api/level/{id}
+Lesson buttons load automatically on page load
 
-```bash
-https://openapi.programming-hero.com/api/level/5
-```
+Active lesson button is visually highlighted
 
-1. Get ⚡ Words Detail <br/>
-   https:// openapi.programming-hero.com/api/word/{id}
+📚 Vocabulary Cards
 
-```bash
-https://openapi.programming-hero.com/api/word/5
-```
+Default instructional text shown initially
 
-1. Get ⚡ All Words <br/>
+Clicking a lesson loads words from API-02
 
-```bash
-https://openapi.programming-hero.com/api/words/all
-```
+Each word card displays:
 
-# Work To do
+Word
 
-### 1. Show Levels on The UI
+Meaning & pronunciation
 
-- [ ] Show a center-aligned heading as Figma
+Action buttons with icons (as per Figma)
 
----
+Displays “No Word Found” if a lesson has no data
 
-- [ ] Create dynamically generated buttons from **API-01** for each lesson
-- [ ] Lesson Buttons will be displayed on page load
+🎨 Active Level Indicator
 
----
+Active lesson button changes color after successful data load
 
-### 2. Show Word Cards Based on Level
+Helps users easily identify the current level
 
-- [ ] Show a default text that will be displayed in the Vocabulary section initially
-- [ ] on Clicking a Specific Lesson Button Load All the words from **API-02**
-- [ ] Display all words for a selected lesson in a card format, showing:
+🪟 Vocabulary Details Modal
 
-  - [ ] Word
-  - [ ] Word meaning & pronunciation
-  - [ ] Two buttons with relevant icons as per Figma
+Modal opens when clicking the details icon
 
-- [ ] Show **\*No Word Found** message if no words exist for a lesson
+Loads detailed data from API-03
 
----
+Modal displays:
 
-- [ ] Create functionality to highlight the active lesson button
+Word with pronunciation
 
----
+Example sentence
 
-### 3. Use Different Color on The Active Level Button
+Synonyms
 
-- [ ] After Successfully Loading words of a level , diffirentiate the button so user can understand which button is active
+“Complete Learning” button to close modal
 
-### 4. Vocabulary Details
+⚠️ Invalid Data Handling
 
-- [ ] Create functionality to open a modal when clicking the details icon
-- [ ] Data will be load from **API-03**
-- [ ] modal will displays:
-  - [ ] Word with pronunciation
-  - [ ] Example sentence
-  - [ ] Synonyms
-  - [ ] A "Complete Learning" button to close the modal
+Prevents displaying null, undefined, or empty values
 
-### 5. Handling Invalid Data
+Shows fallback or relevant text if data is missing
 
-- [ ] avoid displaying falsy values like `undefined` or `null`
-- [ ] display relevant words if no data is found
+⏳ Loading Spinner
 
-### 6. Loading Spinner
+Loading spinner appears while vocabulary data is being fetched
 
-- [ ] Create a loading spinner that will be display when vocabulary is loading from API
+Improves user experience during API calls
 
-### 7. Implement Search Functionality
+🔍 Search Functionality
 
-- [ ] Take a input Box.
-- [ ] on Changing value It will Search word and show in the UI.
-- [ ] If anyone Do search reset active button
+Search input to filter vocabulary words
 
-### 8. Save Word Feature
+Real-time search results shown on input change
 
-- [ ] in the UI of Card add a button `Heart icon`
-- [ ] on Clicking it. Store the Word in the Saved Box
-- [ ] Show Saved words in a Different Section.
+Searching automatically resets the active lesson button
 
-### 9. Speak your Vocabularies
+❤️ Save Word Feature
 
-- [ ] Create functionality for voice pronunciation of vocabulary words
-- [ ] Use below function and implement on clicking sound icon
+Heart icon added to vocabulary cards
 
-```js
+Users can save favorite words
+
+Saved words are displayed in a separate Saved Section
+
+🔊 Speak Your Vocabulary
+
+Pronunciation feature using Web Speech API
+
+Click sound icon to hear word pronunciation
+
 function pronounceWord(word) {
   const utterance = new SpeechSynthesisUtterance(word);
-  utterance.lang = "en-EN"; // English
+  utterance.lang = "en-EN";
   window.speechSynthesis.speak(utterance);
 }
-```
 
-For More >> you can explore this implementation 👉 [https://codepen.io/Ferdous-Zihad/pen/PwoJMmJ](https://codepen.io/Ferdous-Zihad/pen/PwoJMmJ)
+🛠️ Technologies Used
 
----
-Bonus : How to create Private Repository for next assignments
-## Test Repo - :  https://classroom.github.com/a/Fgjib-lr
+HTML
+
+CSS
+
+JavaScript
+
+REST APIs
+
+Web Speech API
+
+📡 APIs Used
+
+API-01 → Fetch lesson/level list
+
+API-02 → Fetch vocabulary words by lesson
+
+API-03 → Fetch detailed vocabulary information
+
+📦 Installation & Setup
+git clone 
+cd vocabulary-
+
+
+Open index.html in your browser or use a live server.
+
+🎯 Future Improvements
+
+User authentication
+
+Persistent saved words using localStorage / database
+
+Pagination for large vocab lists
+
+Mobile optimization
+
+🙌 Acknowledgements
+
+UI inspired by Figma design
+
+Built for learning, practice, and vocabulary improvement
+
+👤 Author
+
+Motahar Hossain Mohim
